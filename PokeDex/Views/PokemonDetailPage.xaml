@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PokeDex.ViewModels;assembly=PokeDex"
+             x:Class="PokeDex.Views.PokemonDetailPage"
+             Title="PokemonDetailPage">
+
+     <ContentPage.BindingContext>
+        <local:PokemonDetailViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding pokemonDetail.sprites.FrontDefault}" WidthRequest="300" HeightRequest="300" />
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Name: " FontSize="20" Margin="0,20,0,10" />
+                <Label Text="{Binding pokemonDetail.name}" FontSize="20" Margin="0,20,0,10" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Weight: " FontSize="20" Margin="0,20,0,10" />
+                <Label Text="{Binding pokemonDetail.weight}" FontSize="20" Margin="0,20,0,10" />
+            </HorizontalStackLayout>
+            
+            <!-- Agrega aquí más detalles del Pokémon que deseas mostrar -->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

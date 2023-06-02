@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PokeDex.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PokeDex"
+    xmlns:local2="clr-namespace:PokeDex.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Text="Menu" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Main" Icon="menu_icon.png">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Info" Icon="menu_icon.png">
+        <ShellContent Route="InfoPage" ContentTemplate="{DataTemplate local2:InfoPage}" />
+    </FlyoutItem>
+
+</Shell>
+
